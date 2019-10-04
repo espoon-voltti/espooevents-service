@@ -12,14 +12,12 @@
 
 - [ ] A task has been created for the PR on the Kanban board with necessary details filled (one task / repo)
 - [ ] The commits and commit messages adhere to [version control conventions](https://voltti.atlassian.net/wiki/spaces/NUORA/pages/32999/Versionhallintak+yt+nn+t#Versionhallintak%C3%A4yt%C3%A4nn%C3%B6t-Commit-viestienmuotoilu)
+- [ ] The API's adhere to the [REST API conventions](https://voltti.atlassian.net/wiki/spaces/VOLTTI/pages/46170144/REST-rajapintak+yt+nn+t)
 - [ ] The code is consistent with the existing code base
-- [ ] Tests have been written for the change
-- [ ] All tests pass (unit, e2e)
+- [ ] Tests have been written for the change (use case, repository, REST API)
+- [ ] All tests pass
 - [ ] All code has been linted and there aren't any lint errors
-- [ ] The change has been tested in the browser with Firefox 59+, Chrome 66+
-- [ ] The change has been tested with a smaller screen (tablet)
-- [ ] The change conforms to the [UX specifications](https://voltti.atlassian.net/wiki/spaces/NUORA/pages/74809369/UX)
-- [ ] All translations have been added (fi, sv, en)
+- [ ] The change has been tested locally, e.g., with httpie
 - [ ] The code is self-documenting or has been documented sufficiently, e.g., in the README
 - [ ] The branch has been rebased against master before the PR was created
 
@@ -29,15 +27,13 @@
 ```
 - [ ] A task has been created for the PR on the Kanban board with necessary details filled (one task / repo)
 - [ ] The commits and commit messages adhere to [version control conventions](https://voltti.atlassian.net/wiki/spaces/NUORA/pages/32999/Versionhallintak+yt+nn+t#Versionhallintak%C3%A4yt%C3%A4nn%C3%B6t-Commit-viestienmuotoilu)
+- [ ] The API's adhere to the [REST API conventions](https://voltti.atlassian.net/wiki/spaces/VOLTTI/pages/46170144/REST-rajapintak+yt+nn+t)
 - [ ] The code is consistent with the existing code base
 - [ ] All changes in all changed files have been reviewed
-- [ ] Tests have been written for the change
-- [ ] All tests pass (unit, e2e)
+- [ ] Tests have been written for the change (use case, repository, REST API)
+- [ ] All tests pass
 - [ ] All code has been linted and there aren't any lint errors
-- [ ] The change has been tested in the browser with Firefox 59+, Chrome 66+
-- [ ] The change has been tested with a smaller screen (tablet)
-- [ ] The change conforms to the [UX specifications](https://voltti.atlassian.net/wiki/spaces/NUORA/pages/74809369/UX)
-- [ ] All translations have been added (fi, sv, en)
+- [ ] The change has been tested locally, e.g., with httpie
 - [ ] The code is self-documenting or has been documented sufficiently, e.g., in the README
 - [ ] The PR branch has been rebased against master and force pushed if necessary before merging
 ```
