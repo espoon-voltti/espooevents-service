@@ -53,7 +53,6 @@ HAYSTACK_CONNECTIONS = {
     'default-sv': {
         'ENGINE': 'multilingual_haystack.backends.LanguageSearchEngine',
         'BASE_ENGINE': 'events.custom_elasticsearch_search_backend.CustomEsSearchEngine',
-        #'URL': 'http://localhost:9200/',
         'URL': 'http://linkedevents-elasticsearch:9200/',
         'INDEX_NAME': 'linkedevents-sv',
         'MAPPINGS': CUSTOM_MAPPINGS
@@ -61,7 +60,6 @@ HAYSTACK_CONNECTIONS = {
     'default-en': {
         'ENGINE': 'multilingual_haystack.backends.LanguageSearchEngine',
         'BASE_ENGINE': 'events.custom_elasticsearch_search_backend.CustomEsSearchEngine',
-        #'URL': 'http://localhost:9200/',
         'URL': 'http://linkedevents-elasticsearch:9200/',
         'INDEX_NAME': 'linkedevents-en',
         'MAPPINGS': CUSTOM_MAPPINGS
@@ -70,7 +68,6 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'multilingual_haystack.backends.LanguageSearchEngine',
         'BASE_ENGINE': 'events.custom_elasticsearch_search_backend.CustomEsSearchEngine',
         'URL': 'http://linkedevents-elasticsearch:9200/',
-        #'URL': 'http://localhost:9200/',
         'INDEX_NAME': 'linkedevents-ru',
         'MAPPINGS': CUSTOM_MAPPINGS
     },
@@ -78,7 +75,6 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'multilingual_haystack.backends.LanguageSearchEngine',
         'BASE_ENGINE': 'events.custom_elasticsearch_search_backend.CustomEsSearchEngine',
         'URL': 'http://linkedevents-elasticsearch:9200/',
-        #'URL': 'http://localhost:9200/',
         'INDEX_NAME': 'linkedevents-zh-hans',
         'MAPPINGS': CUSTOM_MAPPINGS
     },
@@ -86,4 +82,5 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'multilingual_haystack.backends.LanguageSearchEngine',
         'BASE_ENGINE': 'events.custom_elasticsearch_search_backend.CustomEsSearchEngine',
         'URL': 'http://linkedevents-elasticsearch:9200/',
-        #'URL': 'http://localhost:9200/',
+    }
+}
