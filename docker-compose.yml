@@ -30,6 +30,7 @@ services:
         tty: true
         depends_on:
             - dockerhost
+        container_name: test-cli
 
     django:
         build:
@@ -37,7 +38,7 @@ services:
             dockerfile: ./docker/django/Dockerfile
         command: bash -c 'tail -f /dev/null'
         environment:
-            DATABASE_URL: postgres://linkedevents:linkedevents@linkedevents-db/linkedevents
+            DATABASE_URL: postgres://linkedevents:linkedevents@dockerhost:6432/linkedevents
         volumes:
             - .:/code
             - django-media-volume:/var/media/
