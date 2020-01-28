@@ -1,6 +1,14 @@
+import logging
+
+from django.contrib.auth.models import Permission
+from django.db.models import signals
+from django.dispatch import receiver
+
 from helusers.models import AbstractUser
 
 from events.permissions import UserModelPermissionMixin
+
+logger = logging.getLogger(__name__)
 
 
 class User(AbstractUser, UserModelPermissionMixin):
@@ -26,3 +34,13 @@ class User(AbstractUser, UserModelPermissionMixin):
 
     def is_regular_user(self, publisher):
         return self.organization_memberships.filter(id=publisher.id).exists()
+
+
+@receiver(signals.post_save, sender=User)
+def add_permissions(sender, instance, created, *args, **kwargs):
+    if created and not instance.is_superuser:
+        msg = "User Model Instance created, applying EspooEvents CRUD permissions to User instance"
+        logger.debug(msg)
+        logger.info(msg)
+        perms = Permission.objects.filter(codename__iregex=r'^(?:add|change|view|delete)_event$')
+        instance.user_permissions.set(perms)
