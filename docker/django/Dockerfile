@@ -24,6 +24,9 @@ RUN apt-install.sh build-essential gdal-bin gettext \
     && pip install --no-cache-dir -r /app/requirements.txt \
     && apt-cleanup.sh build-essential
 
+# The user needs permission for this folder, or migrations will crash
+RUN chown -R appuser:root /usr/local/lib/python3.6/site-packages/
+
 # ==============================
 FROM base_stage AS development
 # ==============================
