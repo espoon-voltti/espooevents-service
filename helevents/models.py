@@ -39,8 +39,6 @@ class User(AbstractUser, UserModelPermissionMixin):
 @receiver(signals.post_save, sender=User)
 def add_permissions(sender, instance, created, *args, **kwargs):
     if created and not instance.is_superuser:
-        msg = "User Model Instance created, applying EspooEvents CRUD permissions to User instance"
-        logger.debug(msg)
-        logger.info(msg)
+        logger.info("User Model Instance created, applying EspooEvents CRUD permissions to User instance")
         perms = Permission.objects.filter(codename__iregex=r'^(?:add|change|view|delete)_event$')
         instance.user_permissions.set(perms)
