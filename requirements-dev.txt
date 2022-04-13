@@ -4,8 +4,6 @@
 #
 #    pip-compile requirements-dev.in
 #
-appnope==0.1.3
-    # via ipython
 arrow==0.17.0
     # via gitlint
 astroid==2.4.2
@@ -24,7 +22,7 @@ decorator==4.4.2
     # via
     #   ipython
     #   traitlets
-django==2.2.24
+django==2.2.27
     # via
     #   -c requirements.txt
     #   django-debug-toolbar
