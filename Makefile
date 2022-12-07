@@ -105,6 +105,21 @@ import_tprek:
 	linkedevents-admin \
 	python manage.py event_import tprek --places
 
+.PHONY: debug_importing
+debug_importing:
+	@docker run \
+	--rm \
+	--network=host \
+	-it \
+	-e DB_APP_PASSWORD=secret \
+	-e DB_APP_USER=linkedevents_application \
+	-e DB_HOST=localhost \
+	-e DB_NAME=linkedevents \
+	-e SYSTEM_DATA_SOURCE_ID=espooevents \
+	--name linkedevents-admin \
+	linkedevents-admin \
+	/bin/bash
+
 .PHONY: import_osoite
 import_osoite:
 	@docker run \
