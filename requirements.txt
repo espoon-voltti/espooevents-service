@@ -117,7 +117,7 @@ ecdsa==0.15
     # via python-jose
 elasticsearch==5.5.3
     # via -r requirements.in
-future==0.18.2
+future==0.18.3
     # via pyjwkest
 gunicorn==20.0.4
     # via -r requirements.in
