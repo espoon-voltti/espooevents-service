@@ -78,6 +78,13 @@ CUSTOM_ESPOO_AUDIENCE_KEYWORDS = [
         'name_en': 'special groups',
         'data_source_id': ESPOO_DATA_SOURCE_ID,
     },
+    {
+        'id': 'espoo:a7',
+        'name_fi': 'työntekijät',
+        'name_sv': 'anställda',
+        'name_en': 'employees',
+        'data_source_id': ESPOO_DATA_SOURCE_ID,
+    },
 
 ]
 
@@ -91,6 +98,7 @@ YSO_TO_ESPOO_AUDIENCE_KEYWORD_MAPPING = {
     'yso:p2433': 'espoo:a4',  # YSO ikääntyneet -> Espoo seniorit
     'yso:p7179': 'espoo:a5',  # YSO vammaiset -> Espoo vammaiset
     'yso:p17354': 'espoo:a6',  # YSO erityisryhmät -> Espoo erityisryhmät
+    'yso:p1075': 'espoo:a7',  # YSO työntekijöt -> Espoo työntekijät
 }
 
 
