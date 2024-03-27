@@ -352,3 +352,22 @@ migrate:
         --name linkedevents-admin \
         linkedevents-admin \
         python manage.py migrate
+
+.PHONY: setup-dev-env
+setup_dev_env: build_admin \
+	import_finland_municipalities \
+	import_tprek \
+	import_osoite \
+	import_yso \
+	import_helmet # (tällä hetkellä disabloitu) \
+	# import_espoo (TODO: remove) 
+	add_espoo_audience \
+	add_espoo_topics \
+	add_espoo_places \
+	update_keywords \
+	update_places \
+	update_upcoming_events \
+	install_templates
+	echo "setup dev env"
+
+.DEFAULT_GOAL := setup_dev_env
