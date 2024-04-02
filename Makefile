@@ -359,8 +359,8 @@ setup_dev_env: build_admin \
 	import_tprek \
 	import_osoite \
 	import_yso \
-	import_helmet # (tällä hetkellä disabloitu) \
-	# import_espoo (TODO: remove) 
+	#import_helmet # (tällä hetkellä disabloitu) \
+	#import_espoo (TODO: remove) 
 	add_espoo_audience \
 	add_espoo_topics \
 	add_espoo_places \
