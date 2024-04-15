@@ -3,6 +3,9 @@ from django.core.management import call_command
 
 
 def forwards_func(apps, schema_editor):
+    ids = apps.get_model('events', 'DataSource').objects
+    if not ids.exists():
+        call_command('loaddata', 'testsource')
     call_command('loaddata', 'hobby_categories')
 
 
