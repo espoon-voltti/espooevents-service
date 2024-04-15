@@ -544,12 +544,12 @@ class OpeningHoursSpecification(models.Model):
 
 
 class HobbyCategory(BaseModel):
-    name_fi = models.CharField(max_length=20, null=True, blank=True)
-    name_sv = models.CharField(max_length=20, null=True, blank=True)
-    name_en = models.CharField(max_length=20, null=True, blank=True)
-    name_zh_hans = models.CharField(max_length=20, null=True, blank=True)
-    name_ru = models.CharField(max_length=20, null=True, blank=True)
-    name_ar = models.CharField(max_length=20, null=True, blank=True)
+    name_fi = models.CharField(max_length=40, null=True, blank=True)
+    name_sv = models.CharField(max_length=40, null=True, blank=True)
+    name_en = models.CharField(max_length=40, null=True, blank=True)
+    name_zh_hans = models.CharField(max_length=40, null=True, blank=True)
+    name_ru = models.CharField(max_length=40, null=True, blank=True)
+    name_ar = models.CharField(max_length=40, null=True, blank=True)
     topics = models.ManyToManyField(Keyword,
                                     limit_choices_to={"sets": 'espoo:topics'},  related_name='supercategories')
 

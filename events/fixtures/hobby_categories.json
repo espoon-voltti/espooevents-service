@@ -1,0 +1,288 @@
+[
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:1",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Elokuva ja media",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:2",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Eläintenhoito",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:3",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Muotoilu ja arkkitehtuuri",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:4",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Vaikuttaminen ja yhteiskunta",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:5",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Teatteri ja sirkus",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:6",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Kirjallisuus ja sanataide",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:7",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Tiede",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:8",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Ruoka",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:9",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Musiikki",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:10",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Kuvataide",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:11",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Hyvinvointi",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:12",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Ympäristö ja luonto",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:13",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Kädentaidot",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:14",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Ohjelmointi ja pelaaminen",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:15",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Kielet",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:16",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Liikunta",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:17",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Palloilu",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:18",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Sisäliikunta",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:19",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Ulkoliikunta",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:20",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Kamppailu",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:21",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Kuntosali ja kehonhuolto",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:22",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Vesiliikunta",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  }
+]

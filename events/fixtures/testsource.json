@@ -1,0 +1,14 @@
+[
+  {
+    "model": "events.datasource",
+    "pk": "espooevents",
+    "fields": {
+      "name": "",
+      "api_key": "",
+      "owner": null,
+      "user_editable": true,
+      "edit_past_events": false,
+      "create_past_events": false
+    }
+  }
+]
