@@ -1581,28 +1581,25 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
         videos = validated_data.pop('videos', None)
         start_time = validated_data.get('start_time', None)
         end_time = validated_data.get('end_time', None)
+        date_published = validated_data.get('date_published', None)
         super_event = validated_data.pop('super_event', None)
 
-        if instance.super_event is not None and (
-            (
-                instance.super_event.start_time
-                and start_time is not None
-                and start_time < instance.super_event.start_time
-            )
-            or (
-                instance.super_event.end_time
-                and end_time is not None
-                and end_time > instance.super_event.end_time
-            )
-        ):
-            raise DRFPermissionDenied(
-                _(
-                    'Cannot set sub event to start before super event start or end  after super event end.'
-                )
-            )
-
+        if instance.super_event is not None:
+            if ((instance.super_event.start_time
+                 and start_time is not None
+                 and start_time < instance.super_event.start_time)
+                or (instance.super_event.end_time
+                    and end_time is not None
+                    and end_time > instance.super_event.end_time)):
+                raise serializers.ValidationError('TIME_MISMATCH_ERROR')
+            if (
+                    instance.super_event.date_published
+                    and date_published
+                    and date_published < instance.super_event.date_published
+            ):
+                raise serializers.ValidationError('DATE_PUBLISHED_INVALID_ERROR')
         if instance.end_time and instance.end_time < timezone.now() and not self.data_source.edit_past_events:
-            raise DRFPermissionDenied(_('Cannot edit a past event.'))
+            raise serializers.ValidationError('PAST_EVENT_EDIT_ERROR')
 
         # The API only allows scheduling and cancelling events.
         # POSTPONED and RESCHEDULED may not be set, but should be allowed in already set instances.
