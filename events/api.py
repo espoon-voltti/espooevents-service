@@ -40,6 +40,7 @@ from rest_framework import (filters, generics, mixins, permissions, relations,
                             serializers, status, viewsets)
 from rest_framework.exceptions import APIException, ParseError
 from rest_framework.exceptions import PermissionDenied as DRFPermissionDenied
+from rest_framework.exceptions import BadRequest
 from rest_framework.fields import DateTimeField
 from rest_framework.filters import BaseFilterBackend
 from rest_framework.permissions import SAFE_METHODS
@@ -1591,7 +1592,7 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
                 or (instance.super_event.end_time
                     and end_time is not None
                     and end_time > instance.super_event.end_time)):
-                raise DRFPermissionDenied(
+                raise BadRequest(
                     _(
                         'Cannot set sub event to start before super event start or end  after super event end.'
                     )
@@ -1601,13 +1602,13 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
                     and date_published
                     and date_published < instance.super_event.date_published
             ):
-                raise DRFPermissionDenied(
+                raise BadRequest(
                     _(
                         'Cannot set sub event to date published before super event date published.'
                     )
                 )
         if instance.end_time and instance.end_time < timezone.now() and not self.data_source.edit_past_events:
-            raise DRFPermissionDenied(_('Cannot edit a past event.'))
+            raise BadRequest(_('Cannot edit a past event.'))
 
         # The API only allows scheduling and cancelling events.
         # POSTPONED and RESCHEDULED may not be set, but should be allowed in already set instances.
