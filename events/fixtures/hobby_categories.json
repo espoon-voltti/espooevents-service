@@ -284,5 +284,31 @@
       "name_ru": "",
       "name_ar": ""
     }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:23",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "  Voimistelu ja tanssi",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:24",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "  Soveltava liikunta",
+      "name_sv": "",
+      "name_en": "",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
   }
 ]
