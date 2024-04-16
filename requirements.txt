@@ -199,7 +199,7 @@ pyyaml==5.4
     #   django-munigeo
 rdflib==5.0.0
     # via -r requirements.in
-redis==3.4.1
+redis==4.5.3
     # via django-redis
 requests==2.24.0
     # via
