@@ -346,7 +346,7 @@ SOCIALACCOUNT_ADAPTER = 'helusers.adapter.SocialAccountAdapter'
 # REST Framework
 #
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 20,
+    'PAGE_SIZE': 30,
     'ORDERING_PARAM': 'sort',
     'DEFAULT_RENDERER_CLASSES': (
         'events.renderers.JSONRenderer',
