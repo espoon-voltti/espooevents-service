@@ -798,7 +798,7 @@ def test_cannot_edit_sub_events_to_start_before_super_event_start(api_client, mi
     response = update_with_put(api_client, sub_event_id, sub_event)
 
     assert response.status_code == 400
-    returnstring = 'TIME_MISMATCH_ERROR'
+    returnstring = 'server-super-event-start-time-mismatch'
     assert returnstring in str(response.content)
 
 
@@ -823,7 +823,7 @@ def test_cannot_edit_sub_events_to_end_after_super_event_end(api_client, minimal
     response = update_with_put(api_client, sub_event_id, sub_event)
 
     assert response.status_code == 400
-    returnstring = 'TIME_MISMATCH_ERROR'
+    returnstring = 'server-super-event-end-time-mismatch'
     assert returnstring in str(response.content)
 
 
@@ -848,7 +848,7 @@ def test_cannot_sub_event_to_be_published_before_the_super_event(api_client, min
     response = update_with_put(api_client, sub_event_id, sub_event)
 
     assert response.status_code == 400
-    returnstring = 'DATE_PUBLISHED_INVALID_ERROR'
+    returnstring = 'server-date-published-mismatch'
     assert returnstring in str(response.content)
 
 
