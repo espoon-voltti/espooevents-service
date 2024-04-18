@@ -1583,6 +1583,7 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
         end_time = validated_data.get('end_time', None)
         date_published = validated_data.get('date_published', None)
         validation_errors = {}
+        validation_meta_data = {}
 
         if instance.super_event is not None:
             if (
@@ -1591,21 +1592,26 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
                     start_time < instance.super_event.start_time
             ):
                 validation_errors['start_time'] = ["server-super-event-start-time-mismatch"]
+                validation_meta_data['start_time'] = instance.super_event.start_time
             if (
                     instance.super_event.end_time and
                     end_time is not None and
                     end_time > instance.super_event.end_time
             ):
                 validation_errors['end_time'] = ["server-super-event-end-time-mismatch"]
+                validation_meta_data['end_time'] = instance.super_event.end_time
             if (
                     instance.super_event.date_published
                     and date_published
                     and date_published < instance.super_event.date_published
             ):
                 validation_errors['date_published'] = ["server-date-published-mismatch"]
+                validation_meta_data['date_published'] = instance.super_event.date_published
 
         if validation_errors != {}:
-            raise serializers.ValidationError(dict([('type', 'FORM_ERRORS'), ('errors', validation_errors)]))
+            raise serializers.ValidationError(dict([('type', 'FORM_ERRORS'),
+                                                    ('errors', validation_errors),
+                                                    ('metadata', validation_meta_data)]))
 
         if instance.end_time and instance.end_time < timezone.now() and not self.data_source.edit_past_events:
             raise serializers.ValidationError("PAST_EVENT_EDIT_ERROR")
