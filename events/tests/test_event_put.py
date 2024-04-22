@@ -773,8 +773,8 @@ def test_cannot_edit_events_in_the_past(api_client, event, minimal_event_dict, u
     event.save(update_fields=('start_time', 'end_time'))
 
     response = api_client.put(reverse('event-detail', kwargs={'pk': event.id}), minimal_event_dict, format='json')
-    assert response.status_code == 403
-    assert 'Cannot edit a past event' in str(response.content)
+    assert response.status_code == 400
+    assert 'PAST_EVENT_EDIT_ERROR' in str(response.content)
 
 
 @pytest.mark.django_db
@@ -797,8 +797,8 @@ def test_cannot_edit_sub_events_to_start_before_super_event_start(api_client, mi
 
     response = update_with_put(api_client, sub_event_id, sub_event)
 
-    assert response.status_code == 403
-    returnstring = "Cannot set sub event to start before super event start or end  after super event end."
+    assert response.status_code == 400
+    returnstring = 'server-super-event-start-time-mismatch'
     assert returnstring in str(response.content)
 
 
@@ -822,8 +822,33 @@ def test_cannot_edit_sub_events_to_end_after_super_event_end(api_client, minimal
 
     response = update_with_put(api_client, sub_event_id, sub_event)
 
-    assert response.status_code == 403
-    returnstring = "Cannot set sub event to start before super event start or end  after super event end."
+    assert response.status_code == 400
+    returnstring = 'server-super-event-end-time-mismatch'
+    assert returnstring in str(response.content)
+
+
+@pytest.mark.django_db
+def test_cannot_sub_event_to_be_published_before_the_super_event(api_client, minimal_event_dict, user):
+    api_client.force_authenticate(user)
+    minimal_event_dict['date_published'] = (datetime.now() + timedelta(days=2)).isoformat()
+    sub_event_dict = deepcopy(minimal_event_dict)
+    minimal_event_dict['super_event_type'] = Event.SuperEventType.RECURRING
+
+    response = create_with_post(api_client, minimal_event_dict)
+    super_event_url = response.data['@id']
+
+    sub_event_dict['super_event'] = {'@id': super_event_url}
+    sub_event_dict['name']['fi'] = 'sub event 1'
+
+    response = create_with_post(api_client, sub_event_dict)
+    sub_event = response.data
+    sub_event['date_published'] = (datetime.now() + timedelta(days=1)).isoformat()
+    sub_event_id = sub_event.pop('@id')
+
+    response = update_with_put(api_client, sub_event_id, sub_event)
+
+    assert response.status_code == 400
+    returnstring = 'server-date-published-mismatch'
     assert returnstring in str(response.content)
 
 
