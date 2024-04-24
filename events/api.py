@@ -1450,7 +1450,7 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
 
     def validate(self, data):
         # clean all text fields, only description may contain any html
-        data = clean_text_fields(data, allowed_html_fields=['description'])
+        data = clean_text_fields(data, allowed_html_fields=['description', 'description_Html'])
 
         data = super().validate(data)
 
