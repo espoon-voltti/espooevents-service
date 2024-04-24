@@ -592,7 +592,7 @@ class Event(MPTTModel, BaseModel, SchemalessFieldMixin, ReplacedByMixin):
     event_registration_link = models.URLField(verbose_name=_('Event registration link'),
                                               blank=True, null=True, max_length=1000)
     description = models.TextField(verbose_name=_('Description'), blank=True, null=True)
-    description_Html = models.TextField(verbose_name=_('Html description'), blank=True, null=True)
+    description_html = models.TextField(verbose_name=_('Html description'), blank=True, null=True)
     short_description = models.TextField(verbose_name=_('Short description'), blank=True, null=True)
     # Properties from schema.org/CreativeWork
     date_published = models.DateTimeField(verbose_name=_('Date published'), null=True, blank=True)
