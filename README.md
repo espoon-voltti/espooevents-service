@@ -1,3 +1,6 @@
+# This repo is no longer in use
+This repo is migrated into https://github.com/espoon-voltti/espooevents monorepo.
+
 # Linked Events
 
 [![Build status](https://travis-ci.org/City-of-Helsinki/linkedevents.svg)](https://travis-ci.org/City-of-Helsinki/linkedevents)
