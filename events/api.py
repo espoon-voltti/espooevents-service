@@ -200,11 +200,9 @@ def clean_text_fields(data, allowed_html_fields=[]):
                     break
 
             else:
-                data[k] = bleach.clean(v, strip=True)
+                data[k] = bleach.clean(v)
                 # for non-html data, ampersands should be bare
                 data[k] = data[k].replace('&amp;', '&')
-                data[k] = data[k].replace('&lt;', '<')
-                data[k] = data[k].replace('&gt;', '>')
     return data
 
 
@@ -1453,7 +1451,7 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
 
     def validate(self, data):
         # clean all text fields, only description may contain any html
-        data = clean_text_fields(data, allowed_html_fields=['description_html'])
+        data = clean_text_fields(data, allowed_html_fields=['description', 'description_html'])
 
         data = super().validate(data)
 

@@ -1,12 +1,25 @@
 [
   {
     "model": "events.HobbyCategory",
-    "pk": "hobbies:1",
+    "pk": "hobbies:0",
     "fields": {
       "data_source_id": "espooevents",
       "name_fi": "Elokuva ja media",
-      "name_sv": "",
-      "name_en": "",
+      "name_sv": "Film och media",
+      "name_en": "Film and media",
+      "name_zh_hans": "",
+      "name_ru": "",
+      "name_ar": ""
+    }
+  },
+  {
+    "model": "events.HobbyCategory",
+    "pk": "hobbies:1",
+    "fields": {
+      "data_source_id": "espooevents",
+      "name_fi": "Eläintenhoito",
+      "name_sv": "Djurskötsel",
+      "name_en": "Animal care",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -17,9 +30,9 @@
     "pk": "hobbies:2",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Eläintenhoito",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Muotoilu ja arkkitehtuuri",
+      "name_sv": "Design och arkitektur",
+      "name_en": "Design and architecture",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -30,9 +43,9 @@
     "pk": "hobbies:3",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Muotoilu ja arkkitehtuuri",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Vaikuttaminen ja yhteiskunta",
+      "name_sv": "Påverkan och samhälle",
+      "name_en": "Civic participation and society",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -43,9 +56,9 @@
     "pk": "hobbies:4",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Vaikuttaminen ja yhteiskunta",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Teatteri ja sirkus",
+      "name_sv": "Teater och cirkus",
+      "name_en": "Theatre and circus",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -56,9 +69,9 @@
     "pk": "hobbies:5",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Teatteri ja sirkus",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Kirjallisuus ja sanataide",
+      "name_sv": "Litteratur och ordkonst",
+      "name_en": "Literature and literary art",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -69,9 +82,9 @@
     "pk": "hobbies:6",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Kirjallisuus ja sanataide",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Tiede",
+      "name_sv": "Vetenskap",
+      "name_en": "Science",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -82,9 +95,9 @@
     "pk": "hobbies:7",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Tiede",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Ruoka",
+      "name_sv": "Mat",
+      "name_en": "Food",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -95,9 +108,9 @@
     "pk": "hobbies:8",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Ruoka",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Musiikki",
+      "name_sv": "Musik",
+      "name_en": "Music",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -108,9 +121,9 @@
     "pk": "hobbies:9",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Musiikki",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Kuvataide",
+      "name_sv": "Bildkonst",
+      "name_en": "Visual arts",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -121,9 +134,9 @@
     "pk": "hobbies:10",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Kuvataide",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Hyvinvointi",
+      "name_sv": "Välmående",
+      "name_en": "Wellbeing",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -134,9 +147,9 @@
     "pk": "hobbies:11",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Hyvinvointi",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Ympäristö ja luonto",
+      "name_sv": "Miljö och natur",
+      "name_en": "Environment and nature",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -147,9 +160,9 @@
     "pk": "hobbies:12",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Ympäristö ja luonto",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Kädentaidot",
+      "name_sv": "Handarbete och slöjd",
+      "name_en": "Handicrafts",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -160,9 +173,9 @@
     "pk": "hobbies:13",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Kädentaidot",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Ohjelmointi ja pelaaminen",
+      "name_sv": "Programmering och spel",
+      "name_en": "Programming and gaming",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -173,9 +186,9 @@
     "pk": "hobbies:14",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Ohjelmointi ja pelaaminen",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Kielet",
+      "name_sv": "Språk",
+      "name_en": "Languages",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -186,9 +199,9 @@
     "pk": "hobbies:15",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Kielet",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Liikunta",
+      "name_sv": "Motion",
+      "name_en": "Sports and exercise",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -199,9 +212,9 @@
     "pk": "hobbies:16",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Liikunta",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Palloilu",
+      "name_sv": "Bollspel",
+      "name_en": "Ball games",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -212,9 +225,9 @@
     "pk": "hobbies:17",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Palloilu",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Sisäliikunta",
+      "name_sv": "Inomhusmotion",
+      "name_en": "Indoor exercise",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -225,9 +238,9 @@
     "pk": "hobbies:18",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Sisäliikunta",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Ulkoliikunta",
+      "name_sv": "Utomhusmotion",
+      "name_en": "Outdoor exercise",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -238,9 +251,9 @@
     "pk": "hobbies:19",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Ulkoliikunta",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Kamppailu",
+      "name_sv": "Kampsporter",
+      "name_en": "Combat sports",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -251,9 +264,9 @@
     "pk": "hobbies:20",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Kamppailu",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Kuntosali ja kehonhuolto",
+      "name_sv": "Gym och kroppsträning",
+      "name_en": "Gym and body maintenance",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -264,9 +277,9 @@
     "pk": "hobbies:21",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Kuntosali ja kehonhuolto",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Vesiliikunta",
+      "name_sv": "Vattenmotion",
+      "name_en": "Water exercise",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -277,9 +290,9 @@
     "pk": "hobbies:22",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "Vesiliikunta",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Voimistelu ja tanssi",
+      "name_sv": "Gymnastik och dans",
+      "name_en": "Gymnastics and dance",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -290,9 +303,9 @@
     "pk": "hobbies:23",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "  Voimistelu ja tanssi",
-      "name_sv": "",
-      "name_en": "",
+      "name_fi": "Soveltava liikunta",
+      "name_sv": "Tillämpad motion",
+      "name_en": "Adapted physical activity",
       "name_zh_hans": "",
       "name_ru": "",
       "name_ar": ""
@@ -303,7 +316,7 @@
     "pk": "hobbies:24",
     "fields": {
       "data_source_id": "espooevents",
-      "name_fi": "  Soveltava liikunta",
+      "name_fi": "",
       "name_sv": "",
       "name_en": "",
       "name_zh_hans": "",
