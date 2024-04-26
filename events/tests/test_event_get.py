@@ -49,6 +49,7 @@ def assert_event_fields_exist(data, version='v1'):
         'data_source',
         'date_published',
         'description',
+        'description_html',
         'end_time',
         'event_status',
         'external_links',
