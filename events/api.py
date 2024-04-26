@@ -198,6 +198,7 @@ def clean_text_fields(data, allowed_html_fields=[]):
                 if k.startswith(field_name):
                     data[k] = bleach.clean(v, settings.BLEACH_ALLOWED_TAGS)
                     break
+
             else:
                 data[k] = bleach.clean(v)
                 # for non-html data, ampersands should be bare
@@ -1450,7 +1451,7 @@ class EventSerializer(BulkSerializerMixin, EditableLinkedEventsObjectSerializer,
 
     def validate(self, data):
         # clean all text fields, only description may contain any html
-        data = clean_text_fields(data, allowed_html_fields=['description'])
+        data = clean_text_fields(data, allowed_html_fields=['description', 'description_html'])
 
         data = super().validate(data)
 

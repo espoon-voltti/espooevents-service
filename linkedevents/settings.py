@@ -512,7 +512,7 @@ for language in [l[0] for l in LANGUAGES]:
     HAYSTACK_CONNECTIONS.update(connection)
 
 
-BLEACH_ALLOWED_TAGS = bleach.ALLOWED_TAGS + ["p", "div", "br"]
+BLEACH_ALLOWED_TAGS = bleach.ALLOWED_TAGS + ["p", "div", "br", "u", "a"]
 
 THUMBNAIL_PROCESSORS = (
     'image_cropping.thumbnail_processors.crop_corners',
